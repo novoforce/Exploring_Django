@@ -1,7 +1,7 @@
 # Exploring_Django
 
 Model View Template
-
+```
 USERS <----> DJANGO <----
                         |             ------> MODEL
                         |             |
@@ -10,6 +10,7 @@ USERS <----> DJANGO <----
                                       A
                                       |
                                       -------> TEMPLATE
+```
                                       
 
 ## Basic environment settings
