@@ -3,5 +3,5 @@ from . import views #import all the views(function/class) from the current app(d
 
 urlpatterns = [
     path('',views.home, name='home'),
-    path('room/',views.room,name='room'),
+    path('rooms/<str:pk>',views.room,name='room'),
 ]

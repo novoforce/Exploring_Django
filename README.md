@@ -71,3 +71,32 @@ navbar.html ---> main.html (include)
 {% endblock %}
 ```
 
+# Main template restructuring done at: https://youtu.be/PtQiiknWUcI?t=3509
+
+*   All the app(base) specific templates are under:
+        *   Explring_django-> studybud-> base-> templates-> base-> home.html/room.html
+*   and all the main templates are under root template folder:
+        *   Explring_django-> studybud-> templates-> main.html/navbar.html
+
+
+# Dynamic URL routing at https://youtu.be/PtQiiknWUcI?t=3555
+example: path('room/<str:pk>',views.room,name='room')
+
+here str:pk will give the following patterns like "room/1" , "room/2" etc
+
+# Dynamic URL naming at https://youtu.be/PtQiiknWUcI?t=3767 (URL Patterns)
+in the below code:
+path('room/<str:pk>',views.room,name='room')
+
+"name" parameter's value can be used instead of 'room/0' for dynamic routing within the different templates.
+
+This "name" parameter is beneficial when we want to change the name of the url on a large project.
+so we don't have to change the url in each and every codebase. Since all the code will reference the same "name" parameter value.
+```
+{% url room room.id%} from template  === room/1 in the URL rendering
+```
+
+
+https://youtu.be/PtQiiknWUcI?t=3891
+
+
